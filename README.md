@@ -3,6 +3,8 @@ Language: Python
 
 Framework: Django
 
+DB: sqlite3 [Django Inbuilt]
+
 ## Environment
 Assuming following environment is in the target system.
 
@@ -16,7 +18,7 @@ From the project root directory, use 'python3' if various versions are used, els
 - source ENV/bin/activate
 
 ## Setup Script
-Input Data such as  companies.json and people.json are placed in the following location -
+Input Data such as  companies.json and people.json are placed in the following location:
 **paranuara\info_analytics\fixtures\resources**
 
 Setup Script does the following:
@@ -34,7 +36,7 @@ Once Django server started, following endpoints can be tested using Postman or o
 
 - Given a company, return all their employees. Pagination is optional.
 
-> http://127.0.0.1:8000/info-analytics/get-people/company/<company_id>?page_size=<>&page_number=<>
+> **http://127.0.0.1:8000/info-analytics/get-people/company/<company_id>?page_size=<>&page_number=<>**
 
 ```json
 GET
@@ -72,7 +74,7 @@ Response
 
 - Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
 
-> http://127.0.0.1:8000/info-analytics/common-friends/<first_person>/<second_person>
+> **http://127.0.0.1:8000/info-analytics/common-friends/<first_person>/<second_person>**
 
 ```json
 GET
@@ -118,7 +120,7 @@ Response
 
 - Given 1 people, provide a list of fruits and vegetables they like.
 
-> http://127.0.0.1:8000/info-analytics/person-food/<person_id>
+> **http://127.0.0.1:8000/info-analytics/person-food/<person_id>**
 
 ```json
 GET
@@ -145,7 +147,7 @@ Response
 
 ## Testing with different input data
 
-Input Data such as companies.json and people.json are placed in the following location -
+Input Data such as companies.json and people.json are placed in the following location:
 **paranuara\info_analytics\fixtures\resources**
 
 Kindly follow the file naming convention - companies.json and people.json. Else application will throw error.
